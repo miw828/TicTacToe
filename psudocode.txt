@@ -1,0 +1,4 @@
+1. create an array that is the game board
+
+
+2. Create a reset button as well 
