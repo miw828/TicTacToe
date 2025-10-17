@@ -22,10 +22,10 @@ body{
     
     background-color: antiquewhite;
 }
-.tile:hover{
+.tiles:hover{
     background-color: rgb(210, 174, 124);
 }
-.tile {
+.tiles {
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -65,6 +65,7 @@ button:hover{
 }
 
 #player{
+    position: absolute; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +77,7 @@ button:hover{
 }
 
 #status{
-    
+    position: absolute; 
     display: flex; 
     flex-direction: column;
     align-items: center;
