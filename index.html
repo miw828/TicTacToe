@@ -9,10 +9,10 @@
 <body>
     <h1>Tic Tac Toe</h1>
 <div class="gameboard">
-    <div class = "tile"></div>
-    <div class = "tile"></div>
-    <div class = "tile"></div>
-    <div class = "tile"></div>
+    <div class = "tile">0</div>
+    <div class = "tile">1</div>
+    <div class = "tile">2</div>
+    <div class = "tile">3</div>
     <div class = "tile"></div>
     <div class = "tile"></div>
     <div class = "tile"></div>
@@ -27,14 +27,19 @@
     <input type = "text" id = "playerOne" name = "playerOne" required> 
     <label>Player Two Name: </label> 
     <input type = "text" id = "playerTwo" name = "playerTwo" required> 
+    <button id = "submit">Submit</button>
 </div>
 
 <div class = modal id = "status"> 
     <h4>Congratulations!</h4>
-    <button>Restart Game!</button>
+    <button id = "restart">Restart Game!</button>
 
 </div>
 
+<div class = playerHeader></div>
+
+
+<script src="script.js"></script>
 </body>
 
 

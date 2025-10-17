@@ -1,15 +1,29 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(160, 121, 72);
+
+    display: flex;
+    flex-direction: column; /* keeps heading, board, and modals stacked */
+    align-items: center;    /* centers horizontally */
+    justify-content: center; /* centers vertically */
+     margin: 0;
 }
+    
 .gameboard{
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    border: 1px solid; 
+    
     place-items: center;
-    gap: 10px 
+    gap: 10px; 
    
+}
+.gameboard div {
+    
+    background-color: antiquewhite;
+}
+.tile:hover{
+    background-color: rgb(210, 174, 124);
 }
 .tile {
     display: flex; 
@@ -21,6 +35,7 @@ body{
     border-radius: 15px;
 }
 .modal{
+    
     margin: 20px; 
     padding: 10px; 
     border: 1px solid; 
@@ -29,7 +44,6 @@ body{
     
     border-radius: 15px;
     background-color: blanchedalmond;
-
 
 }
 
@@ -45,16 +59,27 @@ button{
 
 }
 
+button:hover{
+    background-color: rgb(161, 141, 116);
+    color: black;
+}
+
 #player{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px; 
+
+    
 
     
 }
 
 #status{
+    
     display: flex; 
     flex-direction: column;
     align-items: center;
+
+    display: none;
 }
