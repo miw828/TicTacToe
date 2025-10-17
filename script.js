@@ -63,10 +63,9 @@ tiles.forEach((tile, index) => { // this is an action with parameters
         if(win()){
         gameEnd = true; 
     statusModal.style.display = "block"; 
-    statusModal.innerHTML +=`<h3>${currentPlayer.player.value}'s Wins!!</h3>`;
-    
-}
-
+   document.getElementById('statusMessage').textContent = `${currentPlayer.player.value}'s Wins!!`;
+statusModal.style.display = "block";
+        }
 
 currentPlayer = currentPlayer === playerOne ? playerTwo : playerOne; // switched
 playerHeader.innerHTML = `<h3>${currentPlayer.player.value}'s Turn</h3>`; 
@@ -94,12 +93,24 @@ function win(){
 }
 playerSubmit.addEventListener("click", (e) => {  // this will just make the modal disappear
     
-    e.preventDefault(); 
+    e.preventDefault(); // makes sure that the website does not refresh 
     playerModal.style.display = "none"
      
 })
 
+restart.addEventListener("click", (e) => {
+  e.preventDefault(); 
+  playerOne.player.value = ""; // resets player values 
+  playerTwo.player.value = "";
 
+  gameEnd = false; 
+  gameBoard = ["", "", "", "", "", "", "", "", ""];
+  tiles.forEach(tile => tile.textContent = "") // for each tile in tiles textContent = ""
+
+  playerModal.style.display = "block"; 
+  statusModal.style.display = "none";
+
+})
 
     
 
