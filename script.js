@@ -10,8 +10,9 @@
 //     
 // 4. Start with modual player display 
 
-
+ 
 let gameEnd = false; 
+
 const tiles = document.querySelectorAll(".tiles"); // this gets ALL of the class that are named tiles in the HTML program 
 
 let playerSubmit = document.getElementById("submit"); // submit button
@@ -91,6 +92,15 @@ function win(){
   }
   return false; // no win yet
 }
+
+// function tie(){// this will check if there is a tie 
+//   for (let i = 0; i < gameBoard; i++){
+//     if(!win &&){
+
+//     }
+//   }
+
+// }
 playerSubmit.addEventListener("click", (e) => {  // this will just make the modal disappear
     
     e.preventDefault(); // makes sure that the website does not refresh 
